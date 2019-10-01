@@ -2,9 +2,9 @@ class Movie {
     constructor(res) {
         this.title = res.title;
         this.body = res.body;
-        this.release = res.release;
-        this.poster = res.poster;
-        this.price = res.price;
+        this.releaseYear = res.releaseYear;
+        this.moviesPoster = res.moviesPoster;
+        this.ticketPrice = res.ticketPrice;
     }
 }
 

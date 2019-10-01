@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h3>test</h3>
+    <ul>
+      <li v-for="key in movies">
+        <span>{{key.title}} -</span>
+        <span>{{key.body}}</span>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -12,9 +19,23 @@ export default {
   props: {
     msg: String
   },
+  data() {
+    return {
+      movies: [
+        // {
+        //   title: "title 1",
+        //   body: "nanöanöan"
+        // },
+        // {
+        //   title: "title2",
+        //   body: "aadfdfd"
+        // }
+      ]
+    };
+  },
 
   created() {
-    getMovieData();
+    this.movies = getMovieData();
   },
   methods: {}
 };
